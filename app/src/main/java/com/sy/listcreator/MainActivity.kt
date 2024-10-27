@@ -88,7 +88,9 @@ class MainActivity : ComponentActivity() {
                         LazyColumn {
                             items(names) { name ->
                                 TextButton(
-                                    onClick = { /*TODO*/ },
+                                    onClick = {
+                                        names.remove(name)
+                                    },
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .padding(8.dp)
@@ -99,7 +101,6 @@ class MainActivity : ComponentActivity() {
                                             .fillMaxWidth()
                                     )
                                 }
-
                             }
                         }
                     }
